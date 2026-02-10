@@ -1,0 +1,308 @@
+Filtering to test students: ['Student_10', 'Student_8', 'Student_13', 'Student_11']
+
+
+********************************************* LLM RESULTS **********************************************************************
+
+================================================================================
+Evaluating: ./output\llm_profile_predictions_Llama-4-Maverick-17B.csv
+================================================================================
+Rows after test filter: 36 (true), 36 (pred)
+Model: Llama-4-Maverick-17B
+Total matched rows: 36
+
+⚠️ Unmapped PRED labels (fix to_canonical_pred):
+label_pred
+other_or_uncertain    2
+Name: count, dtype: int64
+
+Rows kept after label mapping: 34  /  36
+
+===== Overall Metrics =====
+Accuracy        : 0.7059
+Weighted P/R/F1 : 0.6873 / 0.7059 / 0.6922
+Macro    P/R/F1 : 0.5082 / 0.5705 / 0.5320
+
+===== Per-Class Report =====
+                             precision    recall  f1-score   support
+
+        incremental_builder     0.8571    0.8571    0.8571        14
+plan_then_burst_implementer     0.6667    1.0000    0.8000         2
+          tinkerer_explorer     0.7000    0.6364    0.6667        11
+     debugger_centric_fixer     0.3333    0.5000    0.4000         4
+           strategy_shifter     1.0000    1.0000    1.0000         1
+       ai_guided_integrator     0.0000    0.0000    0.0000         1
+   low_validation_completer     0.0000    0.0000    0.0000         1
+
+                   accuracy                         0.7059        34
+                  macro avg     0.5082    0.5705    0.5320        34
+               weighted avg     0.6873    0.7059    0.6922        34
+
+
+===== Confusion Matrix =====
+                             incremental_builder  plan_then_burst_implementer  tinkerer_explorer  debugger_centric_fixer  strategy_shifter  ai_guided_integrator  low_validation_completer
+incremental_builder                           12                            1                  1                       0                 0                     0                         0
+plan_then_burst_implementer                    0                            2                  0                       0                 0                     0                         0
+tinkerer_explorer                              0                            0                  7                       4                 0                     0                         0
+debugger_centric_fixer                         0                            0                  2                       2                 0                     0                         0
+strategy_shifter                               0                            0                  0                       0                 1                     0                         0
+ai_guided_integrator                           1                            0                  0                       0                 0                     0                         0
+low_validation_completer                       1                            0                  0                       0                 0                     0                         0
+
+True-only rows (no prediction): 0
+Pred-only rows (no true label): 0
+
+================================================================================
+Evaluating: ./output\llm_profile_predictions_deepseek-chat.csv
+================================================================================
+Rows after test filter: 36 (true), 36 (pred)
+Model: deepseek-chat
+Total matched rows: 36
+
+Rows kept after label mapping: 36  /  36
+
+===== Overall Metrics =====
+Accuracy        : 0.6944
+Weighted P/R/F1 : 0.6509 / 0.6944 / 0.6679
+Macro    P/R/F1 : 0.4415 / 0.5748 / 0.4907
+
+===== Per-Class Report =====
+                             precision    recall  f1-score   support
+
+        incremental_builder     0.8571    0.8571    0.8571        14
+plan_then_burst_implementer     0.6667    1.0000    0.8000         2
+          tinkerer_explorer     0.6667    0.6667    0.6667        12
+     debugger_centric_fixer     0.4000    0.5000    0.4444         4
+           strategy_shifter     0.5000    1.0000    0.6667         1
+       ai_guided_integrator     0.0000    0.0000    0.0000         2
+   low_validation_completer     0.0000    0.0000    0.0000         1
+
+                   accuracy                         0.6944        36
+                  macro avg     0.4415    0.5748    0.4907        36
+               weighted avg     0.6509    0.6944    0.6679        36
+
+
+===== Confusion Matrix =====
+                             incremental_builder  plan_then_burst_implementer  tinkerer_explorer  debugger_centric_fixer  strategy_shifter  ai_guided_integrator  low_validation_completer
+incremental_builder                           12                            1                  1                       0                 0                     0                         0
+plan_then_burst_implementer                    0                            2                  0                       0                 0                     0                         0
+tinkerer_explorer                              0                            0                  8                       3                 1                     0                         0
+debugger_centric_fixer                         0                            0                  2                       2                 0                     0                         0
+strategy_shifter                               0                            0                  0                       0                 1                     0                         0
+ai_guided_integrator                           1                            0                  1                       0                 0                     0                         0
+low_validation_completer                       1                            0                  0                       0                 0                     0                         0
+
+True-only rows (no prediction): 0
+Pred-only rows (no true label): 0
+
+================================================================================
+Evaluating: ./output\llm_profile_predictions_gemini-3-flash-preview.csv
+================================================================================
+Rows after test filter: 36 (true), 36 (pred)
+Model: gemini-3-flash-preview
+Total matched rows: 36
+
+⚠️ Unmapped PRED labels (fix to_canonical_pred):
+label_pred
+other_or_uncertain    1
+Name: count, dtype: int64
+
+Rows kept after label mapping: 35  /  36
+
+===== Overall Metrics =====
+Accuracy        : 0.6571
+Weighted P/R/F1 : 0.7401 / 0.6571 / 0.6732
+Macro    P/R/F1 : 0.5187 / 0.6361 / 0.5437
+
+===== Per-Class Report =====
+                             precision    recall  f1-score   support
+
+        incremental_builder     0.9167    0.7857    0.8462        14
+plan_then_burst_implementer     0.5000    1.0000    0.6667         2
+          tinkerer_explorer     0.7143    0.4167    0.5263        12
+     debugger_centric_fixer     0.5000    0.7500    0.6000         4
+           strategy_shifter     0.5000    1.0000    0.6667         1
+       ai_guided_integrator     0.5000    0.5000    0.5000         2
+   low_validation_completer     0.0000    0.0000    0.0000         0
+
+                   accuracy                         0.6571        35
+                  macro avg     0.5187    0.6361    0.5437        35
+               weighted avg     0.7401    0.6571    0.6732        35
+
+
+===== Confusion Matrix =====
+                             incremental_builder  plan_then_burst_implementer  tinkerer_explorer  debugger_centric_fixer  strategy_shifter  ai_guided_integrator  low_validation_completer
+incremental_builder                           11                            2                  1                       0                 0                     0                         0
+plan_then_burst_implementer                    0                            2                  0                       0                 0                     0                         0
+tinkerer_explorer                              0                            0                  5                       3                 1                     1                         2
+debugger_centric_fixer                         0                            0                  1                       3                 0                     0                         0
+strategy_shifter                               0                            0                  0                       0                 1                     0                         0
+ai_guided_integrator                           1                            0                  0                       0                 0                     1                         0
+low_validation_completer                       0                            0                  0                       0                 0                     0                         0
+
+True-only rows (no prediction): 0
+Pred-only rows (no true label): 0
+
+================================================================================
+Evaluating: ./output\llm_profile_predictions_gpt5.2.csv
+================================================================================
+Rows after test filter: 36 (true), 36 (pred)
+Model: gpt5.2
+Total matched rows: 36
+
+Rows kept after label mapping: 36  /  36
+
+===== Overall Metrics =====
+Accuracy        : 0.7500
+Weighted P/R/F1 : 0.7593 / 0.7500 / 0.7471
+Macro    P/R/F1 : 0.5844 / 0.6820 / 0.6073
+
+===== Per-Class Report =====
+                             precision    recall  f1-score   support
+
+        incremental_builder     0.8571    0.8571    0.8571        14
+plan_then_burst_implementer     1.0000    1.0000    1.0000         2
+          tinkerer_explorer     0.8000    0.6667    0.7273        12
+     debugger_centric_fixer     0.6000    0.7500    0.6667         4
+           strategy_shifter     0.3333    1.0000    0.5000         1
+       ai_guided_integrator     0.5000    0.5000    0.5000         2
+   low_validation_completer     0.0000    0.0000    0.0000         1
+
+                   accuracy                         0.7500        36
+                  macro avg     0.5844    0.6820    0.6073        36
+               weighted avg     0.7593    0.7500    0.7471        36
+
+
+===== Confusion Matrix =====
+                             incremental_builder  plan_then_burst_implementer  tinkerer_explorer  debugger_centric_fixer  strategy_shifter  ai_guided_integrator  low_validation_completer
+incremental_builder                           12                            0                  1                       0                 0                     1                         0
+plan_then_burst_implementer                    0                            2                  0                       0                 0                     0                         0
+tinkerer_explorer                              0                            0                  8                       2                 2                     0                         0
+debugger_centric_fixer                         0                            0                  1                       3                 0                     0                         0
+strategy_shifter                               0                            0                  0                       0                 1                     0                         0
+ai_guided_integrator                           1                            0                  0                       0                 0                     1                         0
+low_validation_completer                       1                            0                  0                       0                 0                     0                         0
+
+True-only rows (no prediction): 0
+Pred-only rows (no true label): 0
+
+
+********************************************************************************* SEQUENTIAL MACHINE LEARNING (BiLSTM) *******************************************************************************************
+
+Test accuracy: 0.4167
+
+Classification report:
+                             precision    recall  f1-score   support
+
+       AI-Guided Integrator       0.00      0.00      0.00         2
+     Debugger-Centric Fixer       0.33      0.25      0.29         4
+        Incremental Builder       0.47      0.57      0.52        14
+   Low-Validation Completer       0.00      0.00      0.00         1
+Plan-Then-Burst Implementer       0.33      0.50      0.40         2
+           Strategy Shifter       0.00      0.00      0.00         1
+        Tinkerer / Explorer       0.50      0.42      0.45        12
+
+                   accuracy                           0.42        36
+                  macro avg       0.23      0.25      0.24        36
+               weighted avg       0.41      0.42      0.41        36
+
+Confusion matrix:
+[[0 0 2 0 0 0 0]
+ [0 1 1 0 0 1 1]
+ [1 1 8 0 1 0 3]
+ [0 0 0 0 0 0 1]
+ [0 0 1 0 1 0 0]
+ [1 0 0 0 0 0 0]
+ [0 1 5 0 1 0 5]]
+
+
+********************************************************************************* NON - SEQUENTIAL MACHINE LEARNING (BiLSTM) *******************************************************************************************
+
+
+Training Random Forest...
+Accuracy: 0.444
+Classification Report:
+                             precision    recall  f1-score   support
+
+       AI-Guided Integrator       0.00      0.00      0.00         2
+     Debugger-Centric Fixer       0.50      0.25      0.33         4
+        Incremental Builder       0.48      0.79      0.59        14
+   Low-Validation Completer       0.00      0.00      0.00         1
+Plan-Then-Burst Implementer       0.00      0.00      0.00         2
+           Strategy Shifter       0.00      0.00      0.00         1
+        Tinkerer / Explorer       0.40      0.33      0.36        12
+
+                   accuracy                           0.44        36
+                  macro avg       0.20      0.20      0.18        36
+               weighted avg       0.37      0.44      0.39        36
+
+
+Training Gradient Boosting...
+Accuracy: 0.417
+Classification Report:
+                             precision    recall  f1-score   support
+
+       AI-Guided Integrator       0.00      0.00      0.00         2
+     Debugger-Centric Fixer       1.00      0.25      0.40         4
+        Incremental Builder       0.46      0.79      0.58        14
+   Low-Validation Completer       0.00      0.00      0.00         1
+Plan-Then-Burst Implementer       0.00      0.00      0.00         2
+           Strategy Shifter       0.00      0.00      0.00         1
+        Tinkerer / Explorer       0.43      0.25      0.32        12
+
+                   accuracy                           0.42        36
+                  macro avg       0.27      0.18      0.18        36
+               weighted avg       0.43      0.42      0.37        36
+
+
+Training SVM...
+Accuracy: 0.444
+Classification Report:
+                             precision    recall  f1-score   support
+
+       AI-Guided Integrator       0.00      0.00      0.00         2
+     Debugger-Centric Fixer       1.00      0.25      0.40         4
+        Incremental Builder       0.44      0.79      0.56        14
+   Low-Validation Completer       0.00      0.00      0.00         1
+Plan-Then-Burst Implementer       0.00      0.00      0.00         2
+           Strategy Shifter       0.00      0.00      0.00         1
+        Tinkerer / Explorer       0.44      0.33      0.38        12
+
+                   accuracy                           0.44        36
+                  macro avg       0.27      0.20      0.19        36
+               weighted avg       0.43      0.44      0.39        36
+
+
+Training K-Nearest Neighbors...
+Accuracy: 0.472
+Classification Report:
+                             precision    recall  f1-score   support
+
+       AI-Guided Integrator       1.00      0.50      0.67         2
+     Debugger-Centric Fixer       1.00      0.25      0.40         4
+        Incremental Builder       0.46      0.79      0.58        14
+   Low-Validation Completer       0.00      0.00      0.00         1
+Plan-Then-Burst Implementer       0.00      0.00      0.00         2
+           Strategy Shifter       0.00      0.00      0.00         1
+        Tinkerer / Explorer       0.44      0.33      0.38        12
+
+                   accuracy                           0.47        36
+                  macro avg       0.41      0.27      0.29        36
+               weighted avg       0.49      0.47      0.43        36
+
+
+Training Logistic Regression...
+Accuracy: 0.472
+Classification Report:
+                             precision    recall  f1-score   support
+
+       AI-Guided Integrator       0.50      0.50      0.50         2
+     Debugger-Centric Fixer       0.50      0.25      0.33         4
+        Incremental Builder       0.58      0.79      0.67        14
+   Low-Validation Completer       0.00      0.00      0.00         1
+Plan-Then-Burst Implementer       0.50      0.50      0.50         2
+           Strategy Shifter       0.00      0.00      0.00         1
+        Tinkerer / Explorer       0.30      0.25      0.27        12
+
+                   accuracy                           0.47        36
+                  macro avg       0.34      0.33      0.32        36
+               weighted avg       0.44      0.47      0.44        36
